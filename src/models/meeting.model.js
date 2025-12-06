@@ -11,13 +11,12 @@ const meetingSchema = new Schema(
     meetingCode: {
       type: String,
       required: true,
-      unique: true,
       trim: true,
     },
 
     date: {
       type: Date,
-      required: true,
+      default: Date.now,
     },
   },
   { timestamps: true }
